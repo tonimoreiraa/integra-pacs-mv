@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import fastify from 'fastify';
 import { initDatabase } from './database.js';
 import oracledb from 'oracledb'
