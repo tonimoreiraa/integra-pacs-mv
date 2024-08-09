@@ -33,7 +33,7 @@ app.post('/mv/import-report', async (req, res) => {
 
 const start = async () => {
     try {
-      await fastify.listen({ port: process.env.PORT });
+      app.listen({ port: process.env.PORT });
     } catch (err) {
       console.error(err);
       process.exit(1);
