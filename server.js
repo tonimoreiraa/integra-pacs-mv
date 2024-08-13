@@ -94,8 +94,8 @@ app.post('/mv/import-report', async (req, res) => {
             snResultadoPanico: 'N'
           }
       )
-
-        res.status(200).send({ mensagem: 'Sucesso' });
+	    await database.commit()
+        res.status(200).send({ mensagem : 'Sucesso' });
     } catch (err) {
         app.log.error(err);
         res.status(500).send({ mensagem: 'Internal Server Error' });
